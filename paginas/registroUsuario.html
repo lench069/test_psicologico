@@ -1,0 +1,105 @@
+<div class="breadcrumbs ace-save-state" id="breadcrumbs" ng-init = 'initUsuarios()'>
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="principal.html#!/">Inicio</a>
+        </li>
+        <li class="active">Usuarios</li>
+        <li class="active">Ingreso usuarios</li>
+
+    </ul><!-- /.breadcrumb -->
+
+    <div class="nav-search" id="nav-search">
+
+    </div><!-- /.nav-search -->
+</div>
+
+<div class="page-content">
+
+    <div class="page-header">
+        <h1>
+            Ingreso de usuarios
+            <small>
+                <i class="ace-icon fa fa-angle-double-right"></i>
+                Permite ingresar usuarios
+            </small>
+        </h1>
+    </div><!-- /.page-header -->
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <form class="form-horizontal" role="form" ng-submit="registrarU()">
+                <div class="form-group">
+                    <label class="col-md-4 col-sm-4 col-xs-12 control-label no-padding-right" for="idnick"> Nickname: </label>
+                    <div class="col-md-7 col-sm-6 col-xs-10">
+                        <input type="text" id="idnick"  ng-model="nick" placeholder="nick" required class="col-md-7 col-xs-12" minlength="3"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 col-sm-4 col-xs-12 control-label no-padding-right" > Contraseña: </label>
+                    <div class="col-md-7 col-sm-6 col-xs-10">
+                        <input type="text" id="contrasena"  ng-model="contrasena" placeholder="Contraseña" 
+                        required class="col-md-7 col-xs-12" >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 col-sm-4 col-xs-12 control-label no-padding-right" for="idnombres"> Nombres:</label>
+
+                    <div class="col-md-7 col-sm-6 col-xs-10">
+                        <input type="text" id="idnombres" ng-model="nombres" placeholder="Nombres "  class="col-md-7 col-xs-12"  />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 col-sm-4 col-xs-12 control-label no-padding-right" for="idapellidos"> Apellidos:</label>
+
+                    <div class="col-md-7 col-sm-6 col-xs-10">
+                        <input type="text" id="idapellidos" ng-model="apellidos" placeholder="Apellidos " class="col-md-7 col-xs-12"  />
+                    </div>
+                </div>
+            
+
+                <div class="space-4"></div>
+
+                <div class="form-group">
+                    <label class="col-md-4 col-sm-4 col-xs-12 control-label no-padding-right" for="pruebas"> #Pruebas:</label>
+
+                    <div class="col-md-7 col-sm-6 col-xs-10">
+                        <input type="number" id="pruebas" step="1" min="1" max="100" ng-model="pruebas" placeholder="Numero de pruebas" required class="col-md-7 col-xs-12" />
+                    </div>
+                </div>             
+                <div class="form-group">
+                    <label class="col-md-4 col-sm-4 col-xs-12 control-label no-padding-right" for="idcelular"> Celular:</label>
+
+                    <div class="col-md-7 col-sm-6 col-xs-10">
+                        <input type="text" id="idcelular" ng-model="celular" placeholder="Ingrese numero de celular" class="col-md-7 col-xs-12" minlength="7" maxlength="10" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"/>
+                    </div>
+                </div>
+               
+                <div class="form-group">
+                    <label class="col-md-4 col-sm-4 col-xs-12 control-label no-padding-right" for="idemail"> Email:</label>
+
+                    <div class="col-md-7 col-sm-6 col-xs-10">
+                        <input type="text" id="idemail" ng-model="email" placeholder="Email "  class="col-md-7 col-xs-12"  />
+                    </div>
+                </div>
+
+                <div class="clearfix form-actions">
+                    <div class="col-md-offset-3 col-md-9">
+                        <button class="btn btn-info" type="submit">
+                            <i class="ace-icon fa fa-check bigger-110"></i>
+                            Aceptar
+                        </button>
+
+                        &nbsp; &nbsp; &nbsp;
+                        <button class="btn" type="button" ng-click="navegacion('/usuarios')"> 
+                            <i class="ace-icon fa fa-undo bigger-110"></i>
+                            Cancelar
+                        </button>
+                    </div>
+                </div>
+                </form>
+        </div>
+    </div>
+
+</div><!-- /.page-content -->

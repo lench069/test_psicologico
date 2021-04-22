@@ -1,0 +1,272 @@
+<div class="breadcrumbs ace-save-state" id="breadcrumbs" >
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="principal.html#!/">Inicio</a>
+        </li>
+        <li class="active">Test</li>
+        <li class="active">Datos del test</li>
+    </ul><!-- /.breadcrumb -->
+
+    <div class="nav-search" id="nav-search">
+
+    </div><!-- /.nav-search -->
+</div>
+<div class="page-header" >
+    <h1>
+        Resultados
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            Se muestra los relustados de su test.
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="widget-box">
+            <div class="widget-header">
+                <h4 class="widget-title">Resultado</h4>
+            </div>
+                    <div class="col-md-offset-10">
+                        <button class="btn btn-white btn-danger btn-bold " ng-click="imprimir()">'
+                            <i class="ace-icon fa fa-external-link bigger-120 red"></i>
+                        Imprimir
+                        </button>
+                    </div>
+            
+                         <br>
+                        <h4 class="center"><b>Para uso Explusivo del paciente</b></h4>
+                        <br>
+                        <div class="row" id="content">
+                            <div class="col-md-1">
+                            </div>
+
+                            <div class="col-md-4 col-sm-4 col-xs-12">                        
+                                <label  > <b>Nombre:</b> {{datosTestFormTotal.nombreT}}</label>    
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                          
+                                <label  > <b>Tiempo de enfermedad:</b> {{datosTestFormTotal.enferT}}</label>
+                              
+    
+                            </div>
+                        </div>
+                        <div id="elementH"></div>
+                        <div class="row">
+                            <div class="col-md-1">
+                            </div>
+
+                            
+                            <div class="col-md-4 col-sm-4 col-xs-12">                        
+                                <label  > <b>Edad:</b> {{datosTestFormTotal.edadT}}</label>
+                            
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                          
+                                <label  > <b>Test:</b> Invalido</label>
+    
+                            </div>
+                        </div>
+   
+                    <!-- Content Wrapper. Contains page content class="content-wrapper"-->
+
+                    <br>
+                    <div  ng-init="initResultado()">
+                        <!-- Content Header (Page header) -->
+                        <!-- Main content -->
+                        <section class="content">
+                    
+                        <!-- /.row -->
+
+                        <div class="row" >
+                            
+                            <div class="col-md-12">
+                                <!-- Line chart -->
+                                <div class="box box-primary">
+                                    <div class="box-header with-border">
+                                    <i class="fa fa-bar-chart-o"></i>
+    
+                                    <h3 class="box-title">Patrones clínicos de personalidad</h3>
+    
+                                    </div>
+                                    <div class="box-body">
+                                    <div id="bar-chart1" style="height: 300px;"></div>
+                                    </div>
+                                    <!-- /.box-body-->
+                                </div>
+                             </div>
+                        </div>
+                      
+
+                        <div class="row">
+                            
+                            <div class="col-md-6">
+                        
+
+                            <!-- Area chart -->
+                            <div class="box box-warning">
+                                <div class="box-header with-border">
+                                <i class="fa fa-bar-chart-o"></i>
+
+                                <h3 class="box-title">Patología severa de personalidad</h3>
+
+                                </div>
+                                <div class="box-body">
+                                <div id="bar-chart2" style="height: 300px;"></div>
+                                </div>
+                                <!-- /.box-body-->
+                            </div>
+                            <!-- /.box -->
+
+                                <!-- Area chart -->
+                                <div class="box box-success">
+                                    <div class="box-header with-border">
+                                    <i class="fa fa-bar-chart-o"></i>
+                        
+                                    <h3 class="box-title">Síndromes clínicos graves</h3>
+                        
+                                   
+                                    </div>
+                                    <div class="box-body">
+                                    <div id="bar-chart4" style="height: 300px;"></div>
+                                    </div>
+                                    <!-- /.box-body-->
+                                </div>
+                                <!-- /.box -->
+
+                            </div>
+                            <!-- /.col -->
+
+                            <div class="col-md-6">
+                            <!-- Bar chart -->
+                            <div class="box box-info">
+                                <div class="box-header with-border">
+                                <i class="fa fa-bar-chart-o"></i>
+
+                                <h3 class="box-title">Síndromes clínicos</h3>
+
+                                
+                                </div>
+                                <div class="box-body">
+                                <div id="bar-chart3" style="height: 300px;"></div>
+                                </div>
+                                <!-- /.box-body-->
+                            </div>
+                            <!-- /.box -->
+
+                            <!-- Donut chart -->
+                            <div class="box box-warning">
+                                <div class="box-header with-border">
+                                <i class="fa fa-bar-chart-o"></i>
+
+                                <h3 class="box-title">Escalas Modificadores</h3>
+
+                                
+                                </div>
+                                <div class="box-body">
+                                <div id="bar-chart5" style="height: 300px;"></div>
+                                </div>
+                                <!-- /.box-body-->
+                            </div>
+                            <!-- /.box -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                        </section>
+                        <!-- /.content -->
+
+                        <br>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-7">
+
+
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="widget-box transparent">
+                                <div class="widget-header widget-header-flat">
+                                    <h4 class="widget-title lighter">
+                                        <i class="ace-icon fa fa-bookmark orange"></i>
+                                        Indicadores
+                                    </h4>
+
+                                </div>
+
+                                <div class="widget-body">
+                                    <div class="widget-main no-padding">
+                                        <table class="table table-bordered table-striped">
+                                            <thead class="thin-border-bottom">
+                                                <tr>
+                                                    <th>
+                                                        <i class="ace-icon fa fa-caret-right blue"></i>Indicador
+                                                    </th>
+
+                                                    <th>
+                                                        <i class="ace-icon fa fa-caret-right blue"></i>Valores
+                                                    </th>
+
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <tr>
+                                                    <td>Indicador elevado</td>
+                                                    <td>
+                                                        <b class="red">>=85</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Indicador moderado</td>
+                                                    <td>
+                                                        <b class="orange2">75-84</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Indicador sugestivo</td>
+                                                    <td>
+                                                        <b class="orange2">60-74</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Indicador bajo</td>
+                                                    <td>
+                                                        <b class="green">35-59</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Indicador nulo</td>
+                                                    <td>
+                                                        <b class="green">0-34</b>
+                                                    </td>
+                                                </tr>
+
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div><!-- /.widget-main -->
+                                </div><!-- /.widget-body -->
+                            </div><!-- /.widget-box -->
+                        </div><!-- /.col -->
+
+                    </div>
+
+ 
+
+
+
+
+
+
+            <div class="widget-body">
+                <div class="widget-main no-padding">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+</div>
+

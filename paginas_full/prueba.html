@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Fila clickeada en tabla</title>
+<script type="text/javascript">
+window.onload = function() {
+    if (!document.getElementsByTagName || !document.createTextNode) return;
+    var rows = document.getElementById('tabla_uno').getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+    for (i = 0; i < rows.length; i++) {
+        rows[i].onclick = function() {
+            alert(this.rowIndex + 1);
+        }
+    }
+}
+</script>
+</head>
+<body>
+<table id="tabla_uno" rules="rows" style="cursor: pointer;">
+<tbody>
+    <tr><td>fila uno</td><td>fila uno</td><td>fila uno</td><td>fila uno</td></tr>
+    <tr><td>fila dos</td><td>fila dos</td><td>fila dos</td><td>fila dos</td></tr>
+    <tr><td>fila tres</td><td>fila tres</td><td>fila tres</td><td>fila tres</td></tr>
+</tbody>
+</table>
+</body>
+</html>

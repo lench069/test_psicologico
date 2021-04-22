@@ -1,0 +1,126 @@
+<div class="main-content-inner"  ng-init="initAllUsuarios()">
+    <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+        <ul class="breadcrumb">
+            <li>
+                <i class="ace-icon fa fa-home home-icon"></i>
+                <a href="principal.html#!/">Inicio</a>
+            </li>
+            <li class="active">Usuarios</li>
+        </ul><!-- /.breadcrumb -->
+
+        <div class="nav-search" id="nav-search">
+
+        </div><!-- /.nav-search -->
+    </div>
+
+    <div class="page-content">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="page-header">
+                    <h1>
+                        Usuarios
+                        <small>
+                            <i class="ace-icon fa fa-angle-double-right"></i>
+                            Puede realizar acciones como: registrar, modificar y eliminar
+                        </small>
+                    </h1>
+                </div><!-- /.page-header -->
+                <!-- PAGE CONTENT BEGINS -->
+                <div class="row">
+                    <div class="col-md-offset-10">
+                        <button class="btn btn-white btn-info btn-bold " ng-click="navegacion('/reg_usuarios')">'
+                            <i class="ace-icon fa fa-external-link bigger-120 blue"></i>
+                           Agregar Usuario
+                        </button>
+                    </div>
+                    
+                </div>
+                <div class="col-xs-12">
+                    
+                    <div class="table-header">
+                        Usuarios
+                    </div>
+
+                    <!-- tabla-->
+
+                 <div  class="table-responsive">
+                     <table class="table table-striped table-bordered table-hover" id="datatableuser">
+                         <thead >
+                         <tr class="headings">
+
+                             <th class="column-title" style="text-align:center">NickName</th>
+                             <th class="column-title" style="text-align:center">Nombres</th>
+                             <th class="column-title" style="text-align:center">Apellidos</th>
+                             <th class="column-title" style="text-align:center">Contraseña</th>
+                             <th class="column-title" style="text-align:center">email</th>
+                             <th class="column-title" style="text-align:center">celular</th>
+                             <th class="column-title" style="text-align:center">#Pruebas</th>
+                             <th class="column-title" style="text-align:center">Estado</th>
+                             <th class="column-title" style="text-align:center">Accion</th>
+                         </tr>
+                         </thead>
+
+                         <tbody style="text-align:center;">
+                         <tr class="even pointer"  ng-repeat="x in allusuarios">
+
+                             <td class=" "> {{x.NICK}}</td>
+                             <td class=" " >{{x.NOMBRES}} </td>
+                             <td class=" " > {{x.APELLIDOS}}</td>
+                             <td class=" " >{{x.PASWORD}} </td>
+                             <td class=" " >{{x.EMAIL}} </td>
+                             <td class=" " >{{x.CELULAR}} </td>
+                             <td class=" " >{{x.NUM_PRUEBAS}} </td>
+                       
+                             <td class="hidden-480" >
+                                 <div ng-if="x.ESTADO == 1">
+                                    <span class="label label-sm label-success arrowed-in" >Habilitado</span>
+                                 </div>
+                                 <div ng-if="x.ESTADO == 0">
+                                    <span class="label label-sm label-warning arrowed-in" >Inhabilitado</span>
+                                 </div>
+                               
+    
+                                
+                            </td>
+                           
+                             <td class=" " ><div class="hidden-sm hidden-xs action-buttons">
+
+                                 <a class="green" ng-click="modificarUsuario(x)">
+                                     <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                 </a>
+                               
+                             </div>
+
+                                 <div class="hidden-md hidden-lg">
+                                     <div class="inline pos-rel">
+                                         <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                             <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                         </button>
+
+                                         <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+
+                                             <li>
+                                                 <a   class="tooltip-success" data-rel="tooltip" title="Edit" ng-click="modificarUsuario(x)">
+																				<span class="green">
+																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+																				</span>
+                                                 </a>
+                                             </li>
+
+                                         </ul>
+                                     </div>
+                                 </div></td>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <!-- PAGE CONTENT ENDS -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.page-content -->
+</div>

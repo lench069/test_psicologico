@@ -1,0 +1,73 @@
+<div class="breadcrumbs ace-save-state" id="breadcrumbs" ng-init="initPreguntas()">
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="principal.html#!/">Inicio</a>
+        </li>
+        <li class="active">Test</li>
+        <li class="active">Datos del test</li>
+        <li class="active">Preguntas test</li>
+    </ul><!-- /.breadcrumb -->
+
+    <div class="nav-search" id="nav-search">
+
+    </div><!-- /.nav-search -->
+</div>
+<div class="page-header" >
+    <h1>
+        Preguntas
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            Responda las siguientes preguntas
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+<div class="row" id="boxLoading">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="widget-box">
+            <div class="widget-header">
+                <h4 class="widget-title">Preguntas</h4>
+            </div>
+            <div class="widget-body">
+                <div class="widget-main no-padding">
+                    <form class="form-horizontal" role="form" ng-submit="terminar()">
+                        <!-- <legend>Form</legend> -->
+                        <fieldset>
+                       
+                            <div class="row" ng-repeat="x in allPreguntas">
+                                <div class=" form-group ">
+                                    <div class="col-md-1 center"><b>{{x.ID_PREGUNTA}}.</b></div>
+                                    <label class="col-md-9 col-sm-9 col-xs-12" for="{{x.ID_PREGUNTA}}"> <b> {{x.DESCRIPCION}} </b></label>
+                                    <div class="radio col-md-2 col-sm-2 col-xs-12">
+                                        <label>
+                                            <input name="{{x.ID_PREGUNTA}}" id="{{x.ID_PREGUNTA}}" type="radio" class="ace" value="1" />
+                                            <span class="lbl"> V</span>
+                                        </label>
+                                        <label>
+                                            <input name="{{x.ID_PREGUNTA}}" id="{{x.ID_PREGUNTA}}" type="radio" class="ace" value="0" />
+                                            <span class="lbl"> F</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                                   
+                        </fieldset>
+
+                        <div class="form-actions center">
+                            <button type="submit" class="btn btn-sm btn-success" id="bt">
+                                
+                                Terminar
+                                <i class="ace-icon fa fa-arrow-right icon-on-right bigger-110"></i>
+                            </button>
+
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+</div>

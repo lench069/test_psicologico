@@ -1,0 +1,113 @@
+<div class="breadcrumbs ace-save-state" id="breadcrumbs" ng-init="initDatosTest()">
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="principal.html#!/">Inicio</a>
+        </li>
+        <li class="active">Test</li>
+        <li class="active">Datos del test</li>
+    </ul><!-- /.breadcrumb -->
+
+    <div class="nav-search" id="nav-search">
+
+    </div><!-- /.nav-search -->
+</div>
+<div class="page-header">
+    <h1>
+        Datos del Test
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            Debe ingresar la siguiente informacion para continuar con el test
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="widget-box">
+            <div class="widget-header">
+                <h4 class="widget-title">Informacion solicitada</h4>
+            </div>
+
+            <div class="widget-body">
+                <div class="widget-main no-padding">
+                    <form class="form-horizontal" role="form" ng-submit="siguiente()"> 
+                        <!-- <legend>Form</legend> -->
+                        <fieldset>
+                            <h4 class="center"><bold>PLANTILLA DE CORRECCION DEL MCMI-III</bold></h4>
+                            <h5 class="center"><bold>EDICION  2011</bold></h5>
+                            <br>
+
+                            <div class="form-group center" >
+                                <label class="col-md-4 col-sm-4 col-xs-12 control-label no-padding-right" for="idnickt" > NickName: </label>
+                                <div class="col-md-7 col-sm-6 col-xs-10">
+                                    <input type="text" id="idnickt"  ng-model="nickT" placeholder="NickName" disabled  required class="col-md-7 col-xs-12" maxlength="3" required/>
+                                </div>
+                            </div>
+                            <div class="form-group center" >
+                                <label class="col-md-4 col-sm-4 col-xs-12 control-label no-padding-right" for="idcedulat" > Cedula: </label>
+                                <div class="col-md-7 col-sm-6 col-xs-10">
+                                    <input type="text" id="idcedulat"  ng-model="cedulaT" placeholder="Cedula" required class="col-md-7 col-xs-12" maxlength="10" required/>
+                                </div>
+                            </div>
+                            <div class="form-group center" >
+                                <label class="col-md-4 col-sm-4 col-xs-12 control-label no-padding-right" for="idnombret" > Nombre: </label>
+                                <div class="col-md-7 col-sm-6 col-xs-10">
+                                    <input type="text" id="idnombret"  ng-model="nombreT" placeholder="Nombre" required class="col-md-7 col-xs-12" maxlength="100" required/>
+                                </div>
+                            </div>
+
+                            <div class=" form-group ">
+                                <label class="col-md-4 col-sm-4 col-xs-12 control-label no-padding-right" for="idc"> Genero: </label>
+                                <div class="radio col-md-4 col-sm-4 col-xs-12">
+                                    <label>
+                                        <input name="generoT" id="generoT" ng-model="generoT" type="radio" class="ace" value='F' required/>
+                                        <span class="lbl"> Femenino</span>
+                                    </label>
+                                    <label>
+                                        <input name="generoT" id="generoT" ng-model="generoT" type="radio" class="ace" value='M' required/>
+                                        <span class="lbl"> Masculino</span>
+                                    </label>
+                                </div>
+                            </div>
+                              <div class="form-group">
+                                <label class="col-md-4 col-sm-4 col-xs-12 control-label no-padding-right" for="edad"> Edad:</label>
+            
+                                <div class="col-md-7 col-sm-6 col-xs-10">
+                                    <input type="number" id="edad" step="1" ng-model="edadT" placeholder="Edad" required class="col-md-7 col-xs-12" required/>
+                                </div>
+                            </div>      
+                              <div class=" form-group ">
+                                <label class="col-md-4 col-sm-4 col-xs-12 control-label no-padding-right" for="idc"> Tiempo de enfermedad: </label>
+                                <div class="radio col-md-4 col-sm-4 col-xs-12">
+                                    <label>
+                                        <input name="enferT" id="enferT" type="radio" ng-model="enferT"  class="ace" value="Menos de 1 semana" required/>
+                                        <span class="lbl"> Menos de 1 semana</span>
+                                    </label>
+                                    <label>
+                                        <input  name="enferT" id="enferT" type="radio" ng-model="enferT" class="ace" value="De 1 a 4 semanas" required/>
+                                        <span class="lbl"> De 1 a 4 semanas</span>
+                                    </label>
+                                    <label>
+                                        <input  name="enferT" id="enferT" type="radio" ng-model="enferT" class="ace" value="Mas de 4 semanas" required/>
+                                        <span class="lbl"> Mas de 4 semanas</span>
+                                    </label>
+                                </div>
+                              </div>
+
+                        </fieldset>
+<!--ng-click="navegacion('/testForm')"-->
+                        <div class="form-actions center">
+                            <button type="submit" class="btn btn-sm btn-success">
+                                Siguiente
+                                <i class="ace-icon fa fa-arrow-right icon-on-right bigger-110" ></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+</div>
