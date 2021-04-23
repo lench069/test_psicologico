@@ -1,3 +1,19 @@
+<script language="Javascript">
+	function imprSelec(historial){
+    var ficha=document.getElementById(historial);
+    var ventimp=window.open(' ','popimpr');
+    ventimp.document.write(ficha.innerHTML);
+    ventimp.document.close();
+    ventimp.print();
+    ventimp.close();
+  }
+
+    </script>
+    
+	<script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://printjs-4de6.kxcdn.com/print.min.css">
+
+
 <div class="breadcrumbs ace-save-state" id="breadcrumbs" >
     <ul class="breadcrumb">
         <li>
@@ -21,19 +37,21 @@
         </small>
     </h1>
 </div><!-- /.page-header -->
-<div class="row">
+<!--
+<div class="col-md-offset-10">
+    <button class="btn btn-white btn-danger btn-bold " type="button" onclick="printJS('seleccion', 'html')">
+        <i class="ace-icon fa fa-external-link bigger-120 red"></i>
+    Imprimir
+    </button>
+</div>-->
+<div class="row" id="seleccion">
     <div class="col-md-1"></div>
     <div class="col-md-10">
         <div class="widget-box">
             <div class="widget-header">
                 <h4 class="widget-title">Resultado</h4>
             </div>
-                    <div class="col-md-offset-10">
-                        <button class="btn btn-white btn-danger btn-bold " ng-click="imprimir()">'
-                            <i class="ace-icon fa fa-external-link bigger-120 red"></i>
-                        Imprimir
-                        </button>
-                    </div>
+                    
             
                          <br>
                         <h4 class="center"><b>Para uso Explusivo del paciente</b></h4>
