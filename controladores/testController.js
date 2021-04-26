@@ -788,10 +788,6 @@ app.controller('testController', ['$scope', '$http', '$location','$localStorage'
             //console.log($scope.datos);
         }, 5000);
 
-
-     
-
-
     }
 
     /*$scope.siguiente= function()
@@ -990,7 +986,7 @@ app.controller('testController', ['$scope', '$http', '$location','$localStorage'
                         "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
                     }
                 });
-            }, 500);
+            }, 1000);
             
         }else{
             $http({
@@ -1020,7 +1016,7 @@ app.controller('testController', ['$scope', '$http', '$location','$localStorage'
                         "url": "http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
                     }
                 });
-            }, 500);
+            }, 1000);
         }
       
     
